@@ -8,7 +8,7 @@ namespace CafeMenu
 {
     internal class MenuItem
     {
-        public Random Randomizer = new Random();
+        public static Random Randomizer = new Random();
 
         public string[] Proteins = {"Roast beef","Salami",
                         "Turkey","Ham","Pastrami","Tofu"};
@@ -25,7 +25,7 @@ namespace CafeMenu
             string randomProtein = Proteins[Randomizer.Next(Proteins.Length)];
             string randomCondiment = Condiments[Randomizer.Next(Condiments.Length)];
             string randomBread = Breads[Randomizer.Next(Breads.Length)];
-            Description = randomProtein + " witch " + randomCondiment + " on " + randomBread;
+            Description = randomProtein + " with " + randomCondiment + " on " + randomBread;
 
             decimal bucks = Randomizer.Next(2, 5);
             decimal cents = Randomizer.Next(1, 98);
